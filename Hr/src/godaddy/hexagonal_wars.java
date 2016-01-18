@@ -10,6 +10,7 @@ public class hexagonal_wars {
 		int n = sc.nextInt();
 		int[][] g = new int[n][n];
 		int m = sc.nextInt();
+		
 		boolean v = true;
 		for(int i=0;i<n;i++){
 			int x = sc.nextInt()-1;

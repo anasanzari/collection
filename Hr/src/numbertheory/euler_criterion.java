@@ -8,7 +8,7 @@ public class euler_criterion {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		int tests = sc.nextInt();
+		/*int tests = sc.nextInt();
 		for(int t=0;t<tests;t++){
 			int a = sc.nextInt();
 			int m = sc.nextInt();
@@ -26,6 +26,24 @@ public class euler_criterion {
 			}
 			
 			
+		}*/
+		
+		
+		//tests carmicael numbers
+		int n = sc.nextInt();
+		int a = sc.nextInt();
+		int phi = sc.nextInt();
+		for(int i=2;i<n;i++){
+			System.out.print(i+":");
+			generatorfind(i, n, phi);
+			System.out.println("");
+		}
+		
+	}
+	
+	public static void generatorfind(int a, int n, int phi){
+		for(int i=0;i<=phi;i++){
+			System.out.print(" "+wa(a,i,n));
 		}
 	}
 
@@ -41,7 +59,7 @@ public class euler_criterion {
 			}else{
 				long v = wa(n,(pow-1)/2,m)%(m);
 				
-				return ((n*v)%(m)*v)%m;
+				return (n*v*v)%m;
 			}
 		}
 	}
